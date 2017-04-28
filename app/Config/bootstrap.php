@@ -26,7 +26,7 @@ Configure::write('Exception.renderer', 'AppExceptionRenderer');
 /* -= Custom settings =- */
 Configure::write('domain', array(
 	'url' => $_SERVER['SERVER_NAME'],
-	'title' => 'YourDay.dev'
+	'title' => 'ZKH.dev'
 ));
 Configure::write('media', array(
 	'path' => $_SERVER['DOCUMENT_ROOT'].'/files/'

@@ -37,18 +37,20 @@
 				</form-->
 				<!-- END RESPONSIVE QUICK SEARCH FORM -->
 			</li>
-			<li class="nav-item start ">
+			<!--li class="nav-item start ">
 				<a href="<?=$this->Html->url(array('controller' => 'Admin', 'action' => 'index'))?>" class="nav-link">
 					<i class="icon-home"></i>
 					<span class="title"><?=__('Dashboard')?></span>
 				</a>
 
-			</li>
+			</li-->
 			<li class="heading">
 				<h3 class="uppercase"><?=__('Admin area')?></h3>
 			</li>
 <?
 	$aMenu = array(
+		array('label' => 'Клиенты', 'icon' => 'icon-user', 'url' => array('controller' => 'AdminUsers', 'action' => 'index'))
+		/*
 		array('label' => __('Static content'), 'icon' => 'icon-layers', 'url' => '', 'submenu' => array(
 			array('label' => __('Pages'), 'url' => array('controller' => 'AdminPages', 'action' => 'index')),
 			array('label' => __('News'), 'url' => array('controller' => 'AdminNews', 'action' => 'index')),
@@ -80,6 +82,7 @@
 			array('label' => __('Song pack discounts'), 'url' => array('controller' => 'AdminPackDiscounts', 'action' => 'index')),
 			array('label' => __('Statuses'), 'url' => array('controller' => 'AdminSettings', 'action' => 'statuses')),
 		)),
+		*/
 	);
 
 	$menuID = 0;

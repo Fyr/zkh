@@ -4,23 +4,22 @@
 		__('Users') => 'javascript:;',
 		$title => ''
 	);
-	echo $this->element('AdminUI/breadcrumbs', compact('breadcrumbs'));
-	echo $this->element('AdminUI/title', compact('title'));
+	// echo $this->element('AdminUI/breadcrumbs', compact('breadcrumbs'));
+	// echo $this->element('AdminUI/title', compact('title'));
 	echo $this->Flash->render();
 
 	$columns = $this->PHTableGrid->getDefaultColumns($objectType);
-fdebug($columns);
-	$columns[$objectType.'.key']['label'] = __('Licence key');
+	// $columns[$objectType.'.key']['label'] = __('Licence key');
 
 	$rowset = $this->PHTableGrid->getDefaultRowset($objectType);
 	foreach($rowset as &$row) {
-		$row[$objectType]['balance'] = $this->Price->format($row[$objectType]['balance'], 'rus');
+		//$row[$objectType]['balance'] = $this->Price->format($row[$objectType]['balance'], 'rus');
 	}
 ?>
 <div class="row">
 	<div class="col-md-12">
 		<div class="portlet light bordered">
-			<?=$this->element('AdminUI/form_title', array('title' => $title))?>
+			<?=$this->element('AdminUI/form_title', array('title' => 'Клиенты'))?>
 			<div class="portlet-body dataTables_wrapper">
 				<div class="table-toolbar">
 					<div class="row">

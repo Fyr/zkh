@@ -491,7 +491,7 @@ msgid "Catalogs"
 msgstr "Каталоги"
 
 msgid "Users"
-msgstr "Пользователи"
+msgstr "Клиенты"
 
 msgid "Personal order services"
 msgstr "Услуги для индивидуальных заказов"
@@ -527,10 +527,10 @@ msgid "Edit service"
 msgstr "Редактировать услугу"
 
 msgid "Create user"
-msgstr "Создать пользователя"
+msgstr "Создать клиента"
 
 msgid "Edit user"
-msgstr "Редактировать пользователя"
+msgstr "Редактировать клиента"
 
 msgid "Development"
 msgstr "Разработка"
@@ -781,8 +781,8 @@ msgstr "Добро пожаловать, %s!"
 msgid "Full name"
 msgstr "Ф.И.О."
 
-msgid "The name must be between 8 and 50 characters"
-msgstr "Имя должно быть не менее 8 и не более 50 символов"
+msgid "The name must be between 4 and 50 characters"
+msgstr "Имя должно быть не менее 4 и не более 50 символов"
 
 msgid "Value of key must be between 8 and 32 characters"
 msgstr "Значение ключа должно быть не менее 8 и не более 32 символа"
@@ -1048,3 +1048,7 @@ msgstr "Не хватает средств для оплаты! Пожалуйс
 
 msgid "%s item(s) have been added to cart"
 msgstr "%s позиций было добавлено в корзину"
+
+msgid "Your password and its confirmation do not match"
+msgstr "Пароли не совпадают"
+

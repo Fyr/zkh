@@ -9,23 +9,8 @@ class User extends AppModel {
 				'message' => 'Field is mandatory',
 			),
 			'checkNameLen' => array(
-				'rule' => array('between', 8, 50),
-				'message' => 'The name must be between 8 and 50 characters'
-			)
-		),
-		'key' => array(
-			'checkNotEmpty' => array(
-				'rule' => 'notBlank',
-				'message' => 'Field is mandatory',
-			),
-			'checkNameLen' => array(
-				'rule' => array('between', 8, 32),
-				'message' => 'Value of key must be between 8 and 32 characters'
-			),
-			'checkIsUnique' => array(
-				'rule' => 'isUnique',
-				'required' => 'create',
-				'message' => 'That key has already been used'
+				'rule' => array('between', 4, 50),
+				'message' => 'The name must be between 4 and 50 characters'
 			)
 		),
 		'email' => array(

@@ -95,7 +95,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
-		<?=__('Development')?>: <a href="http://kakadu.bz" target="_blank">Kakadu Dev</a>
+		<?=__('Development')?>: <a href="http://phppainkiller.ru" target="_blank">phppainkiller.ru</a>
 		<!--
 		2014 &copy; Metronic by keenthemes.
 		<a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank">Purchase Metronic!</a>

@@ -6,8 +6,8 @@
         $this->ObjectType->getTitle('index', 'User') => array('controller' => 'AdminUsers', 'action' => 'index'),
         __('Edit') => ''
     );
-    echo $this->element('AdminUI/breadcrumbs', compact('breadcrumbs'));
-    echo $this->element('AdminUI/title', compact('title'));
+    // echo $this->element('AdminUI/breadcrumbs', compact('breadcrumbs'));
+    // echo $this->element('AdminUI/title', compact('title'));
     echo $this->Flash->render();
 ?>
 
@@ -25,15 +25,17 @@
             'label' => array('class' => 'col-md-3 control-label', 'text' => __('Confirm password'))
         ));
     } else {
+        /*
         echo $this->PHForm->input('key', array(
             'label' => array('class' => 'col-md-3 control-label', 'text' => __('Licence key'))
         ));
         echo $this->PHForm->input('phone');
+        */
         echo $this->PHForm->input('email');
-        echo $this->PHForm->input('country');
-        echo $this->PHForm->input('city');
-        echo $this->PHForm->input('balance', array('class' => 'form-control input-small'));
-        echo $this->PHForm->input('active');
+        echo $this->PHForm->input('password', array('value' => '' , 'required' => !$id));
+        echo $this->PHForm->input('password_confirm', array('type' => 'password', 'value' => '', 'required' => !$id,
+            'label' => array('class' => 'col-md-3 control-label', 'text' => __('Confirm password'))
+        ));
     }
 
     echo $this->element('AdminUI/form_actions');
