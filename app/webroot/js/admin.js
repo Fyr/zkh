@@ -14,7 +14,7 @@ $(function(){
 	});
 
 	$('.date-picker input[type=hidden]').each(function(){
-		var val = Date.fromSqlDate($(this).val()).fullDate('rus');
+		var val = ($(this).val()) ? Date.fromSqlDate($(this).val()).fullDate('rus') : '';
 		$(this).parent().find('input[type=text]').val(val);
 	});
 
