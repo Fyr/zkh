@@ -39,7 +39,7 @@
 					</a>
 				</li>
 				<li>
-					<a class="" href="javascript:;">
+					<a class="" href="<?=$this->Html->url(array('controller' => 'AdminAuth', 'action' => 'logout'))?>">
 						<i class="icon-logout"></i> Выход
 					</a>
 				</li>

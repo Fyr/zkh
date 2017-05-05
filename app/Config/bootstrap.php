@@ -20,7 +20,7 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-Configure::write('Exception.renderer', 'AppExceptionRenderer');
+// Configure::write('Exception.renderer', 'AppExceptionRenderer');
 // Configure::write('Config.language', 'rus');
 
 /* -= Custom settings =- */

@@ -1,8 +1,10 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('Auth', 'Controller/Component');
+App::uses('PCAuth', 'Core.Controller/Component');
 class AdminAuthController extends AppController {
 	public $name = 'AdminAuth';
-	public $components = array('Core.PCAuth', 'Flash');
+	public $components = array('Auth', 'Core.PCAuth', 'Flash');
 	public $layout = 'login';
 
 	public function beforeFilter() {
@@ -18,7 +20,8 @@ class AdminAuthController extends AppController {
 	}
 
 	public function logout() {
-		return $this->redirect($this->Auth->logout());
+		$this->Auth->logout();
+		return $this->redirect($this->Auth->logoutRedirect);
 	}
 
 }
