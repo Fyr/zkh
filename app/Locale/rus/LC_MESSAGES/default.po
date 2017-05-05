@@ -244,9 +244,6 @@ msgstr "Статьи"
 msgid "Static pages"
 msgstr "Статические страницы"
 
-msgid "Static page blocks"
-msgstr "Блоки статических страниц"
-
 msgid "Create article"
 msgstr "Создать статью"
 
@@ -259,9 +256,6 @@ msgstr "Создать новость"
 msgid "Create FAQ section"
 msgstr "Создать раздел FAQ"
 
-msgid "Create static page block"
-msgstr "Создать блок стат.страницы"
-
 msgid "Edit article"
 msgstr "Редактировать статью"
 
@@ -273,9 +267,6 @@ msgstr "Редактировать новость"
 
 msgid "Edit FAQ section"
 msgstr "Редактировать секцию FAQ"
-
-msgid "Edit static page block"
-msgstr "Редактировать блок стат.страницы"
 
 msgid "View article"
 msgstr "Просмотр статьи"
@@ -301,9 +292,6 @@ msgstr "Стартовая страница админа"
 msgid "Category"
 msgstr "Категория"
 
-msgid "Supply pack"
-msgstr "Комплект поставки"
-
 msgid "Groups"
 msgstr "Группы"
 
@@ -313,26 +301,14 @@ msgstr "Параметры"
 msgid "Tech.params"
 msgstr "Тех.параметры"
 
-msgid "Category blocks"
-msgstr "Блоки для категорий"
-
-msgid "Product blocks"
-msgstr "Блоки для товаров"
-
 msgid "Tech.param groups"
 msgstr "Группы тех.параметров"
 
 msgid "Create category"
 msgstr "Создать категорию"
 
-msgid "Create category block"
-msgstr "Создать блок для категории"
-
 msgid "Create product"
 msgstr "Создать товар"
-
-msgid "Create product block"
-msgstr "Создать блок для товара"
 
 msgid "Create tech.param group"
 msgstr "Создать группу тех.параметров"
@@ -340,17 +316,8 @@ msgstr "Создать группу тех.параметров"
 msgid "Edit category"
 msgstr "Редактировать категорию"
 
-msgid "Edit category block"
-msgstr "Редактировать блок для категории"
-
 msgid "Edit product"
 msgstr "Редактировать товар"
-
-msgid "Edit product block"
-msgstr "Редактировать блок для товара"
-
-msgid "Edit tech.param group"
-msgstr "Редактировать группу тех.параметров"
 
 msgid "Create tech.param"
 msgstr "Создать тех.параметр"
@@ -388,38 +355,8 @@ msgstr "Метка"
 msgid "Settings have been successfully saved"
 msgstr "Настройки были успешно сохранены"
 
-msgid "Product packs"
-msgstr "Комплектация"
-
 msgid "Company name"
 msgstr "Наименование компании"
-
-msgid "Song packs"
-msgstr "Пакеты песен"
-
-msgid "Song PDF-packs"
-msgstr "PDF пакеты обновлений"
-
-msgid "Subscription plans"
-msgstr "Подписки на обновления"
-
-msgid "Create PDF-pack"
-msgstr "Создать PDF-пакет обновлений"
-
-msgid "Create subscription plan"
-msgstr "Создать план подписки"
-
-msgid "Create product pack"
-msgstr "Создать комплектацию"
-
-msgid "Edit PDF-pack"
-msgstr "Редактировать PDF-пакет обновлений"
-
-msgid "Edit subscription plan"
-msgstr "Редактировать план подписки"
-
-msgid "Edit product pack"
-msgstr "Редактировать комплектацию"
 
 msgid "Are you sure to delete this record?"
 msgstr "Вы уверены, что хотите удалить эту запись?"
@@ -493,9 +430,6 @@ msgstr "Каталоги"
 msgid "Users"
 msgstr "Клиенты"
 
-msgid "Personal order services"
-msgstr "Услуги для индивидуальных заказов"
-
 msgid "Message from Support page"
 msgstr "Сообщение со страницы Поддержка"
 
@@ -520,12 +454,6 @@ msgstr "Профили пользователей"
 msgid "Admin profile"
 msgstr "Профиль администратора"
 
-msgid "Create service"
-msgstr "Создать услугу"
-
-msgid "Edit service"
-msgstr "Редактировать услугу"
-
 msgid "Create user"
 msgstr "Создать клиента"
 
@@ -544,29 +472,8 @@ msgstr "Выход"
 msgid "Log out"
 msgstr "Выход"
 
-msgid "Custom order"
-msgstr "Индивидуальный заказ"
-
-msgid "Order song"
-msgstr "Заказ песни"
-
 msgid "Log out"
 msgstr "Выход"
-
-msgid "The advantages of working with a player"
-msgstr "Преимущества работы с плеером"
-
-msgid "The advantages of working with a application"
-msgstr "Преимущества работы с приложением"
-
-msgid "Player licence"
-msgstr "Лицензия плеера"
-
-msgid "Player price"
-msgstr "Стоимость плеера"
-
-msgid "Song price"
-msgstr "Цена одной песни"
 
 msgid "Catalog features"
 msgstr "Возможности каталога"
@@ -586,12 +493,6 @@ msgstr "Бесплатный звонок"
 msgid "Order"
 msgstr "Заказать"
 
-msgid "Order a free demo version of our player right now!"
-msgstr "Закажите бесплатно демо-версию нашего плеера прямо сейчас!"
-
-msgid "The latest news from the world of karaoke"
-msgstr "Последние новости из мира караоке"
-
 msgid "User area"
 msgstr "Личный кабинет"
 
@@ -601,146 +502,20 @@ msgstr "Разработка сайта"
 msgid "Name"
 msgstr "Имя"
 
-msgid "Karaoke systems"
-msgstr "Караоке системы"
-
-msgid "About karaoke systems"
-msgstr "О караоке системах"
-
-msgid "Compare systems"
-msgstr "Сравнение систем"
-
-msgid "Compare karaoke systems"
-msgstr "Сравнение караоке систем"
-
 msgid "Compare %s"
 msgstr "Сравните %s"
 
 msgid "Compare"
 msgstr "Сравнить"
 
-msgid "Order professional recording karaoke songs individually"
-msgstr "Заказ профессиональной звукозаписи караоке песен индивидуально"
-
-msgid "%s for one song"
-msgstr "%s за одну песню"
-
-msgid "Examples of songs sound"
-msgstr "Примеры звучания песен"
-
-msgid "You can appreciate the sound quality and our soundtracks phones"
-msgstr "Вы можете оценить звучание наших фонограмм и качество видеофонов"
-
-msgid "The cost of the full song catalog - %s"
-msgstr "Стоимость песни из полного каталога — %s"
-
-msgid "The same price %s for song"
-msgstr "эквивалент %s за песню"
-
-msgid "Order song"
-msgstr "Заказать песню"
-
-msgid "Free phone number"
-msgstr "Бесплатный номер"
-
 msgid "Contact us"
 msgstr "Свяжитесь с нами"
-
-msgid "Order service packs"
-msgstr "Заказать пакеты обновлений"
-
-msgid "When an individual may need to order songs for karaoke"
-msgstr "Когда может понадобиться индивидуальный заказ песен для караоке"
-
-msgid "New hit"
-msgstr "Новый хит"
-
-msgid "Out of the %stotal complete"
-msgstr "Нет в полной %s комплектации"
-
-msgid "Rare song"
-msgstr "Редкая песня"
-
-msgid "The song of %sown composition"
-msgstr "Песня собственного %s сочинения"
-
-msgid "Children song"
-msgstr "Детская песня"
-
-msgid "Song in a gift"
-msgstr "Песня в подарок"
-
-msgid "Song in a gift"
-msgstr "Старая песня"
-
-msgid "Folk song"
-msgstr "Фольклорная песня"
-
-msgid "Professional%soundtrack"
-msgstr "Профессиональная%sфонограмма"
-
-msgid "How much is the personal order of karaoke songs"
-msgstr "Сколько стоит индивидуальный заказ караоке песни"
-
-msgid "One application for all your entertainment"
-msgstr "Одно приложение для всех ваших развлечений"
-
-msgid "Buy player"
-msgstr "Купить плеер"
-
-msgid "Installation on the operating system Android and iOS"
-msgstr "Установка на операционные системы Android и iOS"
-
-msgid "Access to the full functionality of karaoke player"
-msgstr "Доступ к полному функционалу караоке плеера"
-
-msgid "Easy and quick installation on the tablet"
-msgstr "Простая и быстрая установка на планшет"
-
-msgid "Promptly reply to any question"
-msgstr "Оперативно ответим на любой вопрос"
-
-msgid "Promptly reply to any question"
-msgstr "Спасибо за ваше сообщение!"
-
-msgid "In the near future our experts will answer"
-msgstr "В ближайшее время наши специалисты вам ответят"
-
-msgid "We did not find an answer to your question?"
-msgstr "Не нашли ответ на интересующий Вас вопрос?"
-
-msgid "Write to us and we will be happy to answer."
-msgstr "Напишите нам, и мы с удовольствием Вам ответим."
-
-msgid "Subject matter"
-msgstr "Тема вопроса"
-
-msgid "Type your question..."
-msgstr "Введите Ваш вопрос..."
 
 msgid "Submit"
 msgstr "Отправить"
 
-msgid "Compare selected systems"
-msgstr "Сравнение выбранных систем"
-
 msgid "General information"
 msgstr "Общая информация"
-
-msgid "Select systems to compare"
-msgstr "Выберите системы для сравнения"
-
-msgid "1 system selected"
-msgstr "Выбрана 1 система"
-
-msgid "2 systems selected"
-msgstr "Выбрана 2 системы"
-
-msgid "3 systems selected"
-msgstr "Выбрана 3 системы"
-
-msgid "4 systems selected"
-msgstr "Выбрана 4 системы"
 
 msgid "Go to View product page"
 msgstr "Перейти на страницу просмотра продукта"
@@ -751,29 +526,8 @@ msgstr "Возможности системы"
 msgid "Technical specifications"
 msgstr "Технические характеристики"
 
-msgid "Contents of delivery"
-msgstr "Комплект поставки"
-
-msgid "All system features"
-msgstr "Все возможности системы"
-
-msgid "Compare %s with other systems"
-msgstr "Сравнить %s с другими системами"
-
-msgid "You can download mobile for %s tablets application here"
-msgstr "Скачать мобильное приложение для планшетов %s Вы можете здесь"
-
 msgid "Log into user area"
 msgstr "Вход в личный кабинет"
-
-msgid "Invalid key.<br />You have left %s attempt(s)"
-msgstr "Ключ введен неверно.<br />У Вас осталось %s попытки."
-
-msgid "Your licence key"
-msgstr "Лицензионный ключ"
-
-msgid "You have no attempts left"
-msgstr "У вас не осталось попыток"
 
 msgid "Welcome, %s!"
 msgstr "Добро пожаловать, %s!"
@@ -784,20 +538,8 @@ msgstr "Ф.И.О."
 msgid "The name must be between 4 and 50 characters"
 msgstr "Имя должно быть не менее 4 и не более 50 символов"
 
-msgid "Value of key must be between 8 and 32 characters"
-msgstr "Значение ключа должно быть не менее 8 и не более 32 символа"
-
-msgid "That key has already been used"
-msgstr "Это значение ключа уже было использовано"
-
 msgid "Email is incorrect"
 msgstr "Некорректный email"
-
-msgid "Song pack price"
-msgstr "Стоимость одного пакета"
-
-msgid "Song pack discounts"
-msgstr "Скидки для пакетов"
 
 msgid "Qty"
 msgstr "Кол-во"
@@ -808,29 +550,8 @@ msgstr "Cкидка, %"
 msgid "more then %s"
 msgstr "свыше %s"
 
-msgid "Song pack features"
-msgstr "Возможности пакетов обновлений"
-
-msgid "Old song"
-msgstr "Старая песня"
-
-msgid "All the most current songs for karaoke in one package"
-msgstr "Все самые актуальные песни для караоке в одном пакете"
-
 msgid "Profile"
 msgstr "Профиль"
-
-msgid "Updates"
-msgstr "Обновления"
-
-msgid "Custom song order"
-msgstr "Индивидуальный заказ песни"
-
-msgid "Upgrade"
-msgstr "Модернизация"
-
-msgid "My orders"
-msgstr "Мои заказы"
 
 msgid "Logout"
 msgstr "Выход"
@@ -844,9 +565,6 @@ msgstr "Создать скидку"
 msgid "Edit discount"
 msgstr "Редактировать скидку"
 
-msgid "The application for remote control of your karaoke system"
-msgstr "Приложение для удаленного контроля вашей системой караоке"
-
 msgid "Edit profile"
 msgstr "Редактировать профиль"
 
@@ -855,9 +573,6 @@ msgstr "Есть вопросы? Звоните нам!"
 
 msgid "Free phone number"
 msgstr "Бесплатный номер"
-
-msgid "Also you have the opportunity to <a href=\"%s\">order single song</a> from a shared directory or <a href=\"%s\">make the personal order</a> song that is not in the general catalog"
-msgstr "Также у Вас есть возможность <a href=\"%s\">заказать отдельную песню</a> из общего каталога или <a href=\"%s\">сделать индивидуальный заказ</a> песни, которой нет в общем каталоге"
 
 msgid "Add to cart"
 msgstr "В корзину"
@@ -880,59 +595,14 @@ msgstr "Город"
 msgid "Active"
 msgstr "Активен"
 
-msgid "Licence key"
-msgstr "Лицензионный ключ"
-
-msgid "Songs"
-msgstr "Песни"
-
-msgid "Create song"
-msgstr "Создать песню"
-
-msgid "Edit song"
-msgstr "Редактировать песню"
-
-msgid "Artist"
-msgstr "Исполнитель"
-
-msgid "Song"
-msgstr "Песня"
-
-msgid "Back vocals"
-msgstr "Бэк вокал"
-
-msgid "Video clip"
-msgstr "Видео клип"
-
-msgid "Subscription plan"
-msgstr "План подписки"
-
-msgid "Current state"
-msgstr "Текущее состояние"
-
 msgid "- any format -"
 msgstr "- любой формат -"
 
 msgid "Find"
 msgstr "Найти"
 
-msgid "Services"
-msgstr "Услуги"
-
 msgid "Comment"
 msgstr "Примечание"
-
-msgid "Choose services"
-msgstr "Выберите услуги"
-
-msgid "service(s) choosen"
-msgstr "услуг(а) выбрано"
-
-msgid "Current system"
-msgstr "Текущая система"
-
-msgid "Your custom order have been added to the %s"
-msgstr "Ваш индивидуальный заказ был добавлен в %s"
 
 msgid "cart"
 msgstr "корзину"
@@ -1010,9 +680,6 @@ msgstr "Пополнить баланс"
 msgid "Make payment"
 msgstr "Оплатить"
 
-msgid "Incorrect CRC"
-msgstr "Некорректный CRC"
-
 msgid "Incorrect sum"
 msgstr "Некорректная сумма"
 
@@ -1052,3 +719,14 @@ msgstr "%s позиций было добавлено в корзину"
 msgid "Your password and its confirmation do not match"
 msgstr "Пароли не совпадают"
 
+msgid "Start date"
+msgstr "Начальная дата"
+
+msgid "End date"
+msgstr "Конечная дата"
+
+msgid "Tags"
+msgstr "Тэги"
+
+msgid "Offers"
+msgstr "Офферы"

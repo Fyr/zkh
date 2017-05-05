@@ -16,13 +16,13 @@
 <div class="row">
     <div class="col-md-12">
         <div class="portlet light bordered">
-            <?=$this->element('AdminUI/form_title', array('title' => 'Новости'))?>
+            <?=$this->element('AdminUI/form_title', array('title' => 'Статьи'))?>
             <div class="portlet-body dataTables_wrapper">
                 <div class="table-toolbar">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="btn-group">
-                                <a class="btn green" href="<?=$this->Html->url(array('action' => 'edit', 0, $parent_id))?>">
+                                <a class="btn green" href="<?=$this->Html->url(array('action' => 'edit', 0))?>">
                                     <i class="fa fa-plus"></i> <?=$this->ObjectType->getTitle('create', $objectType)?>
                                 </a>
                             </div>

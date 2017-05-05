@@ -49,6 +49,11 @@
 			</li>
 <?
 	$aMenu = array(
+		array('label' => 'Новости', 'icon' => 'icon-layers', 'url' => array('controller' => 'AdminNews', 'action' => 'index')),
+		array('label' => 'Статьи', 'icon' => 'icon-layers', 'url' => array('controller' => 'AdminArticles', 'action' => 'index')),
+		array('label' => 'Офферы', 'icon' => 'icon-basket-loaded', 'url' => array('controller' => 'AdminOffers', 'action' => 'index')),
+		array('label' => 'Компании', 'icon' => 'icon-briefcase', 'url' => array('controller' => 'AdminCompanies', 'action' => 'index')),
+		array('label' => 'Тэги', 'icon' => 'icon-tag', 'url' => array('controller' => 'AdminTags', 'action' => 'index')),
 		array('label' => 'Клиенты', 'icon' => 'icon-user', 'url' => array('controller' => 'AdminUsers', 'action' => 'index'))
 		/*
 		array('label' => __('Static content'), 'icon' => 'icon-layers', 'url' => '', 'submenu' => array(

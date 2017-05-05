@@ -1,9 +1,8 @@
 <?php
 App::uses('AppModel', 'Model');
-App::uses('Article', 'Article.Model');
-class News extends Article {
-    protected $objectType = 'News';
-
+class News extends AppModel {
+    // protected $objectType = 'News';
+/*
     var $hasOne = array(
         'Media' => array(
             'foreignKey' => 'object_id',
@@ -11,5 +10,5 @@ class News extends Article {
             'dependent' => true
         ),
     );
-
+*/
 }

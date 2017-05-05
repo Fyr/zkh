@@ -11,19 +11,28 @@
     echo $this->Flash->render();
 
     $columns = $this->PHTableGrid->getDefaultColumns($objectType);
-    $columns[$objectType.'.publish_date']['label'] = 'Дата публикации';
+    $columns[$objectType.'.company_id']['label'] = 'Компания';
+    $columns[$objectType.'.start_date']['label'] = __('Start date');
+    $columns[$objectType.'.end_date']['label'] = __('End date');
+    $columns[$objectType.'.discount']['label'] = __('Discount, %');
+    // $row_actions = '../AdminNews/row_actions';
+    $rowset = $this->PHTableGrid->getDefaultRowset($objectType);
+    foreach($rowset as &$row) {
+        $row[$objectType]['discount'].= '%';
+        $row[$objectType]['company_id'] = Hash::get($aCompanyOptions, $row[$objectType]['company_id']);
+    }
 ?>
 <div class="row">
     <div class="col-md-12">
         <div class="portlet light bordered">
-            <?=$this->element('AdminUI/form_title', array('title' => 'Новости'))?>
+            <?=$this->element('AdminUI/form_title', array('title' => 'Офферы'))?>
             <div class="portlet-body dataTables_wrapper">
                 <div class="table-toolbar">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="btn-group">
-                                <a class="btn green" href="<?=$this->Html->url(array('action' => 'edit', 0, $parent_id))?>">
-                                    <i class="fa fa-plus"></i> <?=$this->ObjectType->getTitle('create', $objectType)?>
+                                <a class="btn green" href="<?=$this->Html->url(array('action' => 'edit', 0))?>">
+                                    <i class="fa fa-plus"></i> Создать оффер
                                 </a>
                             </div>
                         </div>
@@ -32,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <?=$this->PHTableGrid->render($objectType, compact('columns'))?>
+                <?=$this->PHTableGrid->render($objectType, compact('columns', 'rowset'))?>
             </div>
         </div>
     </div>

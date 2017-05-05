@@ -31,6 +31,8 @@
             .$this->PHForm->input('teaser', array('label' => array('class' => 'col-md-3 control-label', 'text' => __('Teaser'))))
         ),
         __('Text') => $this->element('Article.edit_body', array('field' => 'body')),
+        __('Tags') => $this->element('../AdminArticles/_edit_tags', array('type' => 'Tag', 'aOptions' => $aTagOptions, 'checked' => $tags)),
+        __('Offers') => $this->element('../AdminArticles/_edit_tags', array('type' => 'Offer', 'aOptions' => $aOfferOptions, 'checked' => $offers)),
     );
 
     if ($id) {

@@ -1,4 +1,5 @@
 <?
+/*
 	$title = $this->ObjectType->getTitle('index', $objectType);
 	$breadcrumbs = array(
 		__('Users') => 'javascript:;',
@@ -13,8 +14,9 @@
 
 	$rowset = $this->PHTableGrid->getDefaultRowset($objectType);
 	foreach($rowset as &$row) {
-		//$row[$objectType]['balance'] = $this->Price->format($row[$objectType]['balance'], 'rus');
+		$row[$objectType]['balance'] = $this->Price->format($row[$objectType]['balance'], 'rus');
 	}
+*/
 ?>
 <div class="row">
 	<div class="col-md-12">
@@ -35,7 +37,7 @@
 						</div>
 					</div>
 				</div>
-				<?=$this->PHTableGrid->render($objectType, compact('columns', 'rowset'))?>
+				<?=$this->PHTableGrid->render($objectType /*, compact('columns', 'rowset')*/)?>
 			</div>
 		</div>
 	</div>
