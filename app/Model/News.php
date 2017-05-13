@@ -1,7 +1,9 @@
 <?php
 App::uses('AppModel', 'Model');
-class News extends AppModel {
-    // protected $objectType = 'News';
+App::uses('Article', 'Article.Model');
+class News extends Article {
+    protected $objectType = 'News';
+
 /*
     var $hasOne = array(
         'Media' => array(

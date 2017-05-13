@@ -36,41 +36,24 @@ class ApiController extends PAjaxController {
     }
 
     public function articles() {
-        App::uses('Article', 'Model');
-        $this->Article = $this->loadModel('Article');
+        App::uses('Article', 'Article.Model');
+        $this->Article = $this->loadModel('Article.Article');
 
         App::uses('ArticleOffer', 'Model');
         $this->ArticleOffer = $this->loadModel('ArticleOffer');
 
-        App::uses('Offer', 'Model');
-        $this->Offer = $this->loadModel('Offer');
-
-        App::uses('News', 'Model');
-        $this->News = $this->loadModel('News');
-
         $page = $this->request->query('page');
         $limit = $this->request->query('limit');
         $params = array(
-            //'conditions' => array('publish_date >= ' => date('Y-m-d H:i:s')),
-            'fields' => array('id', 'title', 'publish_date', 'teaser'),
+            'conditions' => array('Article.object_type' => array('Article', 'News'), 'publish_date >= ' => date('Y-m-d H:i:s')),
+            'fields' => array('id', 'object_type', 'title', 'publish_date', 'teaser'),
             'page' => ($page) ? $page : 1,
-            'limit' => ($limit) ? $limit : 10
+            'limit' => ($limit) ? $limit : 10,
+            'order' => array('publish_date' => 'desc')
         );
 
         $articles = $this->Article->find('all', $params);
-
-        $ids = Hash::extract($articles, '{n}.Article.id');
-        $articleOffers = $this->ArticleOffer->findAllByArticleId($ids);
-        $offer_ids = Hash::extract($articleOffers, '{n}.ArticleOffer.offer_id');
-        $articleOffers = Hash::combine($articleOffers, '{n}.ArticleOffer.offer_id', '{n}.ArticleOffer', '{n}.ArticleOffer.article_id');
-        foreach($articles as &$article) {
-            $article_id = $article['Article']['id'];
-            $article['Offer'] = (isset($articleOffers[$article_id])) ? array_keys($articleOffers[$article_id]) : array();
-        }
-        $offers = $this->Offer->findAllById($offer_ids);
-        $offers = Hash::combine($offers, '{n}.Offer.id', '{n}.Offer');
-        $news = $this->News->find('all', $params);
-        $this->setResponse(compact('articles', 'news', 'offers'));
+        $this->setResponse($articles);
     }
 
     public function view() {

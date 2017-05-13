@@ -3,7 +3,7 @@ App::uses('AppModel', 'Model');
 class Article extends AppModel {
 	public $useTable = 'articles';
 
-	protected $objectType = '';
+	protected $objectType = 'Article';
 
 	/**
 	 * Auto-add object type in find conditions
@@ -12,7 +12,7 @@ class Article extends AppModel {
 	 * @return array
 	 */
 	public function beforeFind($query) {
-		if ($this->objectType) {
+		if ($this->objectType && !(isset($query['conditions']) && isset($query['conditions'][$this->objectType.'.object_type'])) ) {
 			$query['conditions'][$this->objectType.'.object_type'] = $this->objectType;
 		}
 		return $query;
