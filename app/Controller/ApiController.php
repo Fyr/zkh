@@ -39,13 +39,10 @@ class ApiController extends PAjaxController {
         App::uses('Article', 'Article.Model');
         $this->Article = $this->loadModel('Article.Article');
 
-        App::uses('ArticleOffer', 'Model');
-        $this->ArticleOffer = $this->loadModel('ArticleOffer');
-
         $page = $this->request->query('page');
         $limit = $this->request->query('limit');
         $params = array(
-            'conditions' => array('Article.object_type' => array('Article', 'News'), 'publish_date >= ' => date('Y-m-d H:i:s')),
+            'conditions' => array('Article.object_type' => array('Article', 'News', 'Post'), 'publish_date >= ' => date('Y-m-d H:i:s')),
             'fields' => array('id', 'object_type', 'title', 'publish_date', 'teaser'),
             'page' => ($page) ? $page : 1,
             'limit' => ($limit) ? $limit : 10,
@@ -60,7 +57,7 @@ class ApiController extends PAjaxController {
         $objectType = $this->request->query('objectType');
         $id = $this->request->query('id');
 
-        if (!($objectType && $id && in_array($objectType, array('News', 'Article', 'Offer')))) {
+        if (!($objectType && $id && in_array($objectType, array('News', 'Article', 'Offer', 'Post')))) {
             return $this->setError('Incorrect request');
         }
 
