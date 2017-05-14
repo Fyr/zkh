@@ -18,10 +18,12 @@
 <?
     echo $this->element('AdminUI/form_title', array('title' => $this->ObjectType->getTitle($id ? 'edit' : 'create', $objectType)));
     echo $this->PHForm->create($objectType);
-    echo $this->PHForm->input('username');
+
+    $html = $this->PHForm->input('username');
+
     if ($id == 1) {
-        echo $this->PHForm->input('password', array('value' => '' , 'required' => !$id));
-        echo $this->PHForm->input('password_confirm', array('type' => 'password', 'value' => '', 'required' => !$id,
+        $html.= $this->PHForm->input('password', array('value' => '' , 'required' => !$id));
+        $html.= $this->PHForm->input('password_confirm', array('type' => 'password', 'value' => '', 'required' => !$id,
             'label' => array('class' => 'col-md-3 control-label', 'text' => __('Confirm password'))
         ));
     } else {
@@ -31,13 +33,19 @@
         ));
         echo $this->PHForm->input('phone');
         */
-        echo $this->PHForm->input('email');
-        echo $this->PHForm->input('password', array('value' => '' , 'required' => !$id));
-        echo $this->PHForm->input('password_confirm', array('type' => 'password', 'value' => '', 'required' => !$id,
+        $html.= $this->PHForm->input('email');
+        $html.= $this->PHForm->input('password', array('value' => '' , 'required' => !$id));
+        $html.= $this->PHForm->input('password_confirm', array('type' => 'password', 'value' => '', 'required' => !$id,
             'label' => array('class' => 'col-md-3 control-label', 'text' => __('Confirm password'))
         ));
     }
 
+    $tabs = array(
+        __('General') => $this->Html->div('form-body', $html),
+        __('Tags') => $this->element('edit_tags', array('type' => 'Tag', 'aOptions' => $aTagOptions, 'checked' => $tags)),
+        __('Offers') => $this->element('edit_tags', array('type' => 'Offer', 'aOptions' => $aOfferOptions, 'checked' => $offers)),
+    );
+    echo $this->element('AdminUI/tabs', compact('tabs'));
     echo $this->element('AdminUI/form_actions');
     echo $this->PHForm->end();
 ?>

@@ -81,4 +81,66 @@ class ApiController extends PAjaxController {
         }
         $this->setResponse($object);
     }
+
+    public function usertags() {
+        App::uses('User', 'Model');
+        $this->User = $this->loadModel('User');
+        App::uses('UserTag', 'Model');
+        $this->UserTag = $this->loadModel('UserTag');
+
+        if ($this->request->is(array('put', 'post'))) {
+            $tags = $this->request->data('tags');
+            $user_id = intval($this->request->data('user_id'));
+
+            if (!($user_id && is_array($tags))) {
+                return $this->setError('Incorrect input parameters');
+            }
+
+            if (!$this->User->findById($user_id)) {
+                return $this->setError('Incorrect user_id');
+            }
+
+            $this->UserTag->deleteAll(array('user_id' => $user_id));
+            foreach ($tags as $tag_id) {
+                $this->UserTag->clear();
+                $this->UserTag->save(compact('user_id', 'tag_id'));
+            }
+
+            $tags = $this->UserTag->findAllByUserId($user_id);
+            $tags = ($tags) ? Hash::extract($tags, '{n}.UserTag.tag_id') : array();
+            return $this->setResponse($tags);
+        }
+        $this->setError('Incorrect request');
+    }
+
+    public function useroffers() {
+        App::uses('User', 'Model');
+        $this->User = $this->loadModel('User');
+        App::uses('UserOffer', 'Model');
+        $this->UserOffer = $this->loadModel('UserOffer');
+
+        if ($this->request->is(array('put', 'post'))) {
+            $offers = $this->request->data('offers');
+            $user_id = intval($this->request->data('user_id'));
+
+            if (!($user_id && is_array($offers))) {
+                return $this->setError('Incorrect input parameters');
+            }
+
+            if (!$this->User->findById($user_id)) {
+                return $this->setError('Incorrect user_id');
+            }
+
+            $this->UserOffer->deleteAll(array('user_id' => $user_id));
+            foreach ($offers as $offer_id) {
+                $this->UserOffer->clear();
+                $this->UserOffer->save(compact('user_id', 'offer_id'));
+            }
+
+            $offers = $this->UserOffer->findAllByUserId($user_id);
+            $offers = ($offers) ? Hash::extract($offers, '{n}.UserOffer.offer_id') : array();
+            return $this->setResponse($offers);
+        }
+        $this->setError('Incorrect request');
+    }
 }
