@@ -8,7 +8,7 @@ class ApiController extends PAjaxController {
         return true;
     }
 
-    public function client() {
+    public function user() {
         App::uses('User', 'Model');
         $this->User = $this->loadModel('User');
 
@@ -137,6 +137,31 @@ class ApiController extends PAjaxController {
             $offers = $this->UserOffer->findAllByUserId($user_id);
             $offers = ($offers) ? Hash::extract($offers, '{n}.UserOffer.offer_id') : array();
             return $this->setResponse($offers);
+        }
+        $this->setError('Incorrect request');
+    }
+
+    public function userposts() {
+        App::uses('User', 'Model');
+        $this->User = $this->loadModel('User');
+        App::uses('Post', 'Model');
+        $this->Post = $this->loadModel('Post');
+
+        if ($this->request->is(array('put', 'post'))) {
+            $title = $this->request->data('title');
+            $publish_date = $this->request->data('publish_date');
+            $teaser = $this->request->data('teaser');
+            $object_type = 'Post';
+            if (!($title && $teaser && $publish_date)) {
+                return $this->setError('Incorrect input parameters');
+            }
+
+            if (!$this->Post->save($this->request->data)) {
+                return $this->setError('Error saving data');
+            }
+
+            $id = $this->Post->id;
+            return $this->setResponse($this->Post->findById($id));
         }
         $this->setError('Incorrect request');
     }
